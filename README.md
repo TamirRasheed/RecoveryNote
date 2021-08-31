@@ -19,7 +19,7 @@
 
 | Student Name | Student Email | GitHub Username |
 |    :---:     |     :---:     |     :---:       |
-| member1      |               |                 |
+| Hongjie Li   | hli14@mail.sfu.edu | hongjie003 |
 | member2      |               |                 |
 | member3      |               |                 |
 | member4      |               |                 |
