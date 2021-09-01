@@ -21,7 +21,7 @@
 |    :---:     |     :---:     |     :---:       |
 | Hongjie Li   | hli14@mail.sfu.edu | hongjie003 |
 | Ivan Cebreros|icebreros@mail.sfsu.edu|icebreros|
-| member3      |               |                 |
+| Tamir Rasheed|trasheed@mail.sfsu.edu|Tamirrasheed|
 | member4      |               |                 |
 | member5      |               |                 |
 | member6      |               |                 |
