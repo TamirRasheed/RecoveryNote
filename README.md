@@ -20,7 +20,7 @@
 | Student Name | Student Email | GitHub Username |
 |    :---:     |     :---:     |     :---:       |
 | Hongjie Li   | hli14@mail.sfu.edu | hongjie003 |
-| member2      |               |                 |
+| Ivan Cebreros|icebreros@mail.sfsu.edu|icebreros|
 | member3      |               |                 |
 | member4      |               |                 |
 | member5      |               |                 |
