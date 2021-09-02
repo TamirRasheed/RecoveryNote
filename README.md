@@ -18,7 +18,7 @@
 
 
 | Student Name | Student Email | GitHub Username |
-|    :---:     |     :---:     |     :---:       |
+|    :Nyambayar:     |     :npurevtseren@mail.sfsu.edu:     |     :nyambayar317:       |
 | Hongjie Li   | hli14@mail.sfu.edu | hongjie003 |
 | Ivan Cebreros|icebreros@mail.sfsu.edu|icebreros|
 | Tamir Rasheed|trasheed@mail.sfsu.edu|Tamirrasheed|
