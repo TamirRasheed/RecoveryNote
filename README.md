@@ -23,7 +23,7 @@
 | Ivan Cebreros|icebreros@mail.sfsu.edu|icebreros|
 | Tamir Rasheed|trasheed@mail.sfsu.edu|Tamirrasheed|
 | Kuncheng Wu  |kwu13@mail.sfsu.edu|VincentWu6324|
-| member5      |               |                 |
+| Joel Giannelli|jgiannelli@mail.sfsu.edu|jg100|
 | member6      |               |                 |
 
 ## NO code needs to be stored in the root of your repository. You may rename the application folder if you like to your team's application name. But all source code related to your team's application should be stored inside the application folder.
