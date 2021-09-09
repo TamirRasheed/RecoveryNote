@@ -4,7 +4,7 @@ const MembersData = [
   { id: 'Joe3', name: 'Joe3', imageUrl: '', route: '/about/joe3' },
   { id: 'Joe4', name: 'Joe4', imageUrl: '', route: '/about/joe4' },
   { id: 'Joe5', name: 'Joe5', imageUrl: '', route: '/about/joe5' },
-  { id: 'Joe6', name: 'Joe6', imageUrl: '', route: '/about/joe6' },
+  { id: 'TamirRasheed', name: 'Tamir Rasheed', imageUrl: '', route: '/about/TamirRasheed' },
 ];
 
 export default MembersData;
