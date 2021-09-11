@@ -11,11 +11,12 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
+//Lambda exoression stored in JoelsPage
 const JoelsPage = () => {
   const { imageMedia, textCenter } = useStyles();
 
   return (
-    <Box px='5em' py='4em'>
+    <Box px='5em' py='4em' >
       <Grid container spacing={6} alignItems='center'>
         <Grid item xs={12} sm={6}>
           <img className={imageMedia} src={profilePicture} alt='Profile' />
@@ -29,7 +30,7 @@ const JoelsPage = () => {
         <Grid item xs={12} sm={12} md={12} lg={12}>
           <hr />
         </Grid>
-        <Box clone order={{ xs: 3, sm: 2 }}>
+        <Box clone order={{ xs: 3, sm: 2 }} className={textCenter}>
           <Grid item xs={12} sm={6}>
             <Typography variant='h3'>Hey there!</Typography>
             <Typography>
@@ -41,26 +42,21 @@ const JoelsPage = () => {
             </Typography>
           </Grid>
         </Box>
-        <Box clone order={{ xs: 2, sm: 3 }}>
-          <Grid item xs={12} sm={6}>
-            
-          </Grid>
-        </Box>
+        
         <Box clone order={{ xs: 4 }}>
           <Grid item xs={12} sm={12} md={12} lg={12}>
             <hr />
           </Grid>
         </Box>
-        <Box clone order={{ xs: 4 }}>
+        
+        <Box clone order={{ xs: 4 }} className={textCenter}>
           <Grid item xs={12} sm={6}>
-            
-          </Grid>
-        </Box>
-        <Box clone order={{ xs: 4 }}>
-          <Grid item xs={12} sm={6}>
-            <Typography variant='h3'>Interest</Typography>
+            <Typography variant='h3'>Interests</Typography>
             <Typography>
-            In terms of sports and hobbies, I enjoy boxing, basketball and music. 
+            In terms of sports and hobbies, I enjoy boxing, basketball and music. I have played the 
+            guitar for a little over six years and enjoy playing around with it on a regualr basis. 
+            In terms of basketball, while I'm not very good that certainlty doens't stop me from breaking
+            my friends ankles and trying to dunk on them. 
             </Typography>
           </Grid>
         </Box>
