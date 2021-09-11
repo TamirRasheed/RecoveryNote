@@ -1,13 +1,31 @@
-import { Button, Card, CardActions, CardContent } from '@material-ui/core';
+import {
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  makeStyles,
+} from '@material-ui/core';
 import { Link as RouterLink } from 'react-router-dom';
 
+const useStyles = makeStyles(() => ({
+  imageMedia: {
+    width: '100%',
+    maxWidth: '26rem',
+  },
+  centerContent: {
+    justifyContent: 'center',
+  },
+}));
+
 const MembersCard = (props) => {
+  const { centerContent, imageMedia } = useStyles();
+
   return (
     <Card>
-      <CardContent>
-        <img src={props.image} alt='membersImage' />
+      <CardContent className={centerContent}>
+        <img className={imageMedia} src={props.image} alt='membersImage' />
       </CardContent>
-      <CardActions>
+      <CardActions className={centerContent}>
         <Button
           color='inherit'
           to={props.url}

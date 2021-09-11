@@ -1,4 +1,4 @@
-import { Box, Divider, Grid, makeStyles, Typography } from '@material-ui/core';
+import { Box, Grid, makeStyles, Typography } from '@material-ui/core';
 import profilePicture from './../../../../assets/About/HongjiesPage/hongjie_profile.jpg';
 import sfsuPicture from './../../../../assets/About/HongjiesPage/sfsu_gator.png';
 import ssbuPicture from './../../../../assets/About/HongjiesPage/ssbu_cover.png';
@@ -8,13 +8,16 @@ const useStyles = makeStyles(() => ({
     width: '100%',
     maxWidth: '30rem',
   },
-  textCenter: {
+  elementCenter: {
     textAlign: 'center',
+  },
+  title: {
+    padding: '0.5em 0',
   },
 }));
 
 const HongjiesPage = () => {
-  const { imageMedia, textCenter } = useStyles();
+  const { imageMedia, elementCenter, title } = useStyles();
 
   return (
     <Box px='5em' py='4em'>
@@ -23,17 +26,21 @@ const HongjiesPage = () => {
           <img className={imageMedia} src={profilePicture} alt='Profile' />
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Typography className={textCenter} variant='h3'>
+          <Typography className={`${elementCenter} ${title}`} variant='h3'>
             Hongjie Li
           </Typography>
-          <Typography className={textCenter}>Team 6's Frontend Lead</Typography>
+          <Typography className={elementCenter}>
+            Team 6's Frontend Lead
+          </Typography>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={12}>
           <hr />
         </Grid>
         <Box clone order={{ xs: 3, sm: 2 }}>
           <Grid item xs={12} sm={6}>
-            <Typography variant='h3'>Hey there!</Typography>
+            <Typography className={title} variant='h3'>
+              Hey there!
+            </Typography>
             <Typography>
               My name is Hongjie. I’m a senior student at SFSU and I'm majoring
               in computer science. I plan to graduate after finishing Spring
@@ -45,7 +52,7 @@ const HongjiesPage = () => {
           </Grid>
         </Box>
         <Box clone order={{ xs: 2, sm: 3 }}>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={6} className={elementCenter}>
             <img className={imageMedia} src={sfsuPicture} alt='Temp' />
           </Grid>
         </Box>
@@ -55,20 +62,22 @@ const HongjiesPage = () => {
           </Grid>
         </Box>
         <Box clone order={{ xs: 4 }}>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={6} className={elementCenter}>
             <img className={imageMedia} src={ssbuPicture} alt='Profile' />
           </Grid>
         </Box>
         <Box clone order={{ xs: 4 }}>
           <Grid item xs={12} sm={6}>
-            <Typography variant='h3'>Interest</Typography>
+            <Typography className={title} variant='h3'>
+              Interest
+            </Typography>
             <Typography>
-              Beside programming, I also enjoy playing video games. An example,
-              Super Smash Brothers Ultimate. And if you know what I'm talking
-              about and want to hop in a couple of matches, let me know. I also
-              have a bunch of other hobbies I enjoy but that's all I'm willing
-              to share right now. Maybe if we play a couple matches, I tell you
-              more about myself.
+              Beside programming, I also enjoy playing video games such as Super
+              Smash Brothers Ultimate(SSBU). And if you know what I'm refering
+              to and you want to hop in a couple match with me, let me know. I
+              also have a bunch of other hobbies I enjoy but that's all I'm
+              willing to share right now. Maybe if we play a few rounds in SSBU,
+              I will tell you more about myself.
             </Typography>
           </Grid>
         </Box>
