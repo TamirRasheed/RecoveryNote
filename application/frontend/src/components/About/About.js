@@ -21,7 +21,7 @@ const About = () => {
         {MembersData.map((member) => (
           <Grid key={member.id} item xs={12} sm={6} md={4}>
             <MembersCard
-              image={member.imageUrl}
+              image={member.imageSource}
               name={member.name}
               url={member.route}
             />
