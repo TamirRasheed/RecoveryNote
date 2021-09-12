@@ -1,16 +1,24 @@
 import KunchengsPage from './PersonalPage/KunchengsPage';
+import HongjiesPage from './PersonalPage/HongjiesPage';
 
-import profilePicture from './../../../assets/About/KunchengsPage/KunchengsImage.jpg';
+import KunchengProfilePicture from './../../../assets/About/KunchengsPage/KunchengsImage.jpg';
+import HongjiesProfileImage from './../../../assets/About/HongjiesPage/hongjie_profile.jpg';
 
 const MembersData = [
-  { id: 'Joe1', name: 'Joe1', imageUrl: '', route: '/about/joe1' },
+  {
+    id: 'Hongjie1',
+    name: 'Hongjie',
+    imageSource: HongjiesProfileImage,
+    route: '/about/hongjie',
+    pageComponent: <HongjiesPage />,
+  },
   { id: 'Joe2', name: 'Joe2', imageUrl: '', route: '/about/joe2' },
   { id: 'Joe3', name: 'Joe3', imageUrl: '', route: '/about/joe3' },
 
   {
     id: 'Kuncheng4',
     name: 'Kuncheng',
-    imageSource: profilePicture,
+    imageSource: KunchengProfilePicture,
     route: '/about/kuncheng',
     pageComponent: <KunchengsPage />,
   },
