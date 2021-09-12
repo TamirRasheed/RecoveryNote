@@ -1,7 +1,7 @@
 import { Switch, Route } from 'react-router-dom';
 import About from '../About/About';
 import MembersData from '../About/Members/MembersData';
-import HongjiesPage from '../About/Members/PersonalPage/HongjiesPage';
+import KunchengsPage from '../About/Members/PersonalPage/KunchengsPage';
 
 const RouteHandler = () => {
   // TODO: Make this dynamic for other milestone
@@ -14,7 +14,7 @@ const RouteHandler = () => {
       ))}
 
       <Route path='/about/test'>
-        <HongjiesPage />
+        <KunchengsPage />
       </Route>
 
       <Route path='/'>
