@@ -15,35 +15,56 @@ const KunchengsPage = () => {
     return (
         <Box px='5em' py='4em'>
             <Grid container spacing={6} alignItems='center'>
-                <Typography textAlign='center' variant='h6'>
-                    Kuncheng Wu
-                    <Typography textAlign='center'>
-                        Team 6's GitHub Master
+                <Grid item xs={12} sm={6}>
+                    <img className={Image} src={selfPicture} alt='Temp' />
+                </Grid>
+                <Grid item xs>
+                    <Typography textAlign='center' variant='h2'>
+                        Kuncheng Wu
+                        <Typography textAlign='center' variant='h6'>
+                            Team 6's GitHub Master
+                        </Typography>
                     </Typography>
-                </Typography>
-                <Typography textAlign='center' variant='body1'>
+                </Grid>
+
+                <Grid item xs={12} sm={12} md={12} lg={12}>
+                    <hr />
+                </Grid>
+
+                <Grid item>
+                    <Typography textAlign='center' variant='h4'>
+                        Introduction
+                    </Typography>
+                    <Typography textAlign='center' variant='body1'>
                         I’m a senior and majoring computer science in SFSU right now.
                         I like fishing and playing video game. I’m from the South part
                         of China and I can speak mandarin and cantonese. In terms of
                         the computer languages, I’m more familiar with Java, Javascript
                         and some Python. I’m willing to learn new things.
-                </Typography>
-                <Box clone order={{ xs: 2, sm: 3 }}>
-                    <Grid item xs={12} sm={6}>
-                        <img className={Image} src={selfPicture} alt='Temp' />
-                    </Grid>
-                </Box>
-                <Typography textAlign='center' variant='body1'>
-                    Interests/Hobbies
-                </Typography>
-                <Typography>
+                    </Typography>
+                </Grid>
+
+                <Grid item xs={12} sm={12} md={12} lg={12}>
+                    <hr />
+                </Grid>
+
+                <Grid item>
+                    <Typography textAlign='center' variant='h4'>
+                        Interests/Hobbies
+                    </Typography>
+                    <Typography textAlign='center' variant='body1'>
                         I like fishing and playing video game during the weekends. I like going
                         to the beach or jetty and spending all day fishing there. Even though most
                         of the time no luck all day, I still enjoy it. The reason why I love fishing
                         is because cooking the food you catch by yourself is the most delicious thing
                         in the world!
+                    </Typography>
+                </Grid>
 
-                </Typography>
+                <Grid item xs={12} sm={12} md={12} lg={12}>
+
+                </Grid>
+
             </Grid>
         </Box>
     )}
