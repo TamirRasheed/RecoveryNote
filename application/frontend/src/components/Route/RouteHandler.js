@@ -9,7 +9,7 @@ const RouteHandler = () => {
     <Switch>
       {MembersData.map((member) => (
         <Route key={'route' + member.id} exact path={member.route}>
-          <p>{member.name}</p>
+          {member.pageComponent}
         </Route>
       ))}
 
