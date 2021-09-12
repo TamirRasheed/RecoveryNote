@@ -21,7 +21,6 @@ const HongjiesPage = () => {
 
   return (
     <Box px='5em' py='4em'>
-      {' '}
       {/* Padding */}
       <Grid container spacing={6} alignItems='center'>
         {/* Item 1 */}
