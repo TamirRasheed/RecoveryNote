@@ -28,6 +28,11 @@ const About = () => {
           </Grid>
         ))}
       </Grid>
+      <Box py='2em' textAlign='center'>
+        <hr />
+        <Typography>Meeting: Wednesday and Friday</Typography>
+        <Typography>Method: Discord</Typography>
+      </Box>
     </Fragment>
   );
 };
