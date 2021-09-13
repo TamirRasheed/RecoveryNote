@@ -3,7 +3,6 @@ import { Switch, Route } from 'react-router-dom';
 import About from '../About/About';
 import RouteScrollToTop from './RouteScrollToTop';
 import MembersData from '../About/Members/MembersData';
-import KunchengsPage from '../About/Members/PersonalPage/KunchengsPage';
 
 const RouteHandler = () => {
   // TODO: Make this dynamic for other milestone
@@ -16,10 +15,6 @@ const RouteHandler = () => {
             {member.pageComponent}
           </Route>
         ))}
-
-        <Route path='/about/test'>
-          <KunchengsPage />
-        </Route>
 
         <Route path='/'>
           <About />

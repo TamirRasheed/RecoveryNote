@@ -14,6 +14,7 @@ const useStyles = makeStyles(() => ({
   },
   centerContent: {
     justifyContent: 'center',
+    textAlign: 'center',
   },
 }));
 
