@@ -13,20 +13,22 @@ const Navbar = ({ click }) => {
   return (
     <nav className='navbar'>
       <div className='navbar__logo'>
-        <h2>MERN Shopping Cart</h2>
+        <Link to='/'>
+          <h2>RecoveryNote</h2>
+        </Link>
       </div>
 
       <ul className='navbar__links'>
         <li>
           <Link to='/cart' className='cart__link'>
-            <i className='fas fa-shopping-cart'></i>
-            <span>
-              Cart <span className='cartlogo__badge'>{getCartCount()}</span>
-            </span>
+            <i className='fas fa-shopping-cart cartlogo'></i>
+            {getCartCount() > 0 && (
+              <span className='cartlogo__badge'>{getCartCount()}</span>
+            )}
           </Link>
         </li>
         <li>
-          <Link to='/'>Shop</Link>
+          <Link to='/login'>Login</Link>
         </li>
       </ul>
 

@@ -6,6 +6,8 @@
 
 .cartscreen h2 {
   margin-bottom: 1rem;
+  color: #f4f4f4;
+  text-shadow: 0px 0px 7px #555;
 }
 
 .cartscreen__left {
@@ -13,6 +15,11 @@
   margin-right: 1rem;
   background: transparent;
   padding: 1rem;
+}
+
+.cartscreen__empty__cart {
+  color: #f4f4f4;
+  text-shadow: 0px 0px 7px #555;
 }
 
 .cartscreen__right {

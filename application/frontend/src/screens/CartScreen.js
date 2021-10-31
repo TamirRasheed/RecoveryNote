@@ -42,7 +42,7 @@ const CartScreen = () => {
           <h2>Shopping Cart</h2>
 
           {cartItems.length === 0 ? (
-            <div>
+            <div className='cartscreen__empty__cart'>
               Your Cart Is Empty <Link to='/'>Go Back</Link>
             </div>
           ) : (

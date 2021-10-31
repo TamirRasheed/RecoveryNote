@@ -1,0 +1,45 @@
+.loginscreen {
+  max-width: 400px;
+  margin: 3rem auto;
+  padding: 1rem 1rem;
+  background-color: #f4f4f4;
+  box-shadow: 5px 5px 10px #555;
+  border-radius: 5px;
+}
+
+.loginscreen > * {
+  margin: 1.5rem 0;
+}
+
+.loginscreen__title {
+  text-align: center;
+}
+
+.loginscreen__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginscreen__form > label {
+  display: flex;
+  margin-top: 3px;
+  flex-direction: column;
+}
+
+.loginscreen__form > .login__button {
+  margin-top: 1rem;
+  padding: 5px;
+  border: none;
+  border-radius: 2px;
+  background-color: #171717;
+  color: #f4f4f4;
+  font-size: 1rem;
+}
+
+.loginscreen__form > .login__button:hover {
+  background-color: #373737;
+}
+
+.loginscreen_footer {
+  text-align: center;
+}
