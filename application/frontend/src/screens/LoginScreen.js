@@ -1,4 +1,5 @@
 import './LoginScreen.css';
+import { Link } from 'react-router-dom';
 
 const LoginScreen = () => {
   return (
@@ -16,7 +17,7 @@ const LoginScreen = () => {
         <input className='login__button' type='submit' value='Sign In' />
       </form>
       <p className='loginscreen_footer'>
-        Don't have an account? Click here to <a href='#'>Sign Up</a>
+      Don't have an account? Click here to <Link to="signup" > Sign Up </Link>
       </p>
     </div>
   );
