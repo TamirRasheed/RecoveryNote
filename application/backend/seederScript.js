@@ -6,6 +6,8 @@ const Product = require('./models/Product');
 
 connectDB();
 
+/* TODO: Update these to match new change */
+
 const importData = async () => {
   try {
     await Product.deleteMany({});

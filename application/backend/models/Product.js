@@ -13,12 +13,22 @@ const productSchema = mongoose.Schema({
     type: Number,
     required: true,
   },
-  countInStock: {
-    type: Number,
-    required: true,
-  },
   imageUrl: {
     type: String,
+    required: true,
+  },
+  sold: {
+    type: Boolean,
+    default: false,
+  },
+  department: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'department',
+    required: true,
+  },
+  sellerId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'user',
     required: true,
   },
 });
