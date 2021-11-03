@@ -21,7 +21,7 @@ const productSchema = mongoose.Schema({
     type: Boolean,
     default: false,
   },
-  department: {
+  departmentId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'department',
     required: true,
