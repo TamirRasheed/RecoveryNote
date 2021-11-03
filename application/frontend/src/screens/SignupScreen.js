@@ -26,12 +26,7 @@ const SignupScreen = () => {
             Major:
             <input type='text' id='major__name' name='major__name' />
             </label>
-
-
         <input className='signup__button' type='submit' value='Sign Up' />
-
-
-
       </form>
       
     </div>
