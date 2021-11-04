@@ -40,7 +40,11 @@ const HomeScreen = ({ history }) => {
           ))}
       </select>
 
-      <button onClick={handleSearch} type='button'>
+      <button
+        className='homescreen__search__button'
+        onClick={handleSearch}
+        type='button'
+      >
         Search
       </button>
     </div>
