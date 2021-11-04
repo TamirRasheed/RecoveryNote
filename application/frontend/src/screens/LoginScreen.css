@@ -3,8 +3,8 @@
   margin: 3rem auto;
   padding: 1rem 1rem;
   background-color: #f4f4f4;
-  box-shadow: 5px 5px 10px #555;
-  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(96, 96, 96, 0.6);
+  border-radius: 4px;
 }
 
 .loginscreen > * {
@@ -27,8 +27,8 @@
 }
 
 .loginscreen__form > .login__button {
-  margin-top: 1rem;
-  padding: 5px;
+  margin-top: 0.7rem;
+  padding: 10px 17px;
   border: none;
   border-radius: 2px;
   background-color: #171717;

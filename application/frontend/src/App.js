@@ -33,13 +33,8 @@ function App() {
           <Route exact path='/cart' component={CartScreen} />
           <Route exact path='/login' component={LoginScreen} />
           <Route exact path='/signup' component={SignupScreen} />
-<<<<<<< HEAD
-          <Route exacth path='/thankscreen' component={ThankScreen}/>
-          <Route exact path='/postproductscreen' component={PostProductScreen}/>
-
-=======
-          <Route exacth path='/thankscreen' component={ThankScreen} />
->>>>>>> 214cd98bf17e86a096034698af23a09f769c5299
+          <Route exacth path='/thanks' component={ThankScreen} />
+          <Route exact path='/post-product' component={PostProductScreen} />
         </Switch>
       </main>
     </Router>
