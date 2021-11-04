@@ -1,8 +1,11 @@
+const mongoose = require('mongoose');
 const Product = require('../models/Product');
 
 const getProductsByDepartment = async (req, res) => {
   try {
-    const products = await Product.find({ deparmentId: req.params.id });
+    const products = await Product.find({
+      departmentId: mongoose.Types.ObjectId(req.params.id),
+    });
     res.json(products);
   } catch (error) {
     console.error(error);
@@ -27,7 +30,7 @@ const postProduct = async (req, res) => {
 
     await newProduct.save();
 
-    res.status(200);
+    res.json({ success: true });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Server Post Product Error' });

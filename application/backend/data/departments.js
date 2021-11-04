@@ -1,6 +1,14 @@
+const mongoose = require('mongoose');
+
 departments = [
-  { _id: 1, name: 'Science & Engineering' },
-  { _id: 2, name: 'Business' },
+  {
+    _id: new mongoose.mongo.ObjectId('ddddddddddddddddddddddd1'),
+    name: 'Science & Engineering',
+  },
+  {
+    _id: new mongoose.mongo.ObjectId('ddddddddddddddddddddddd2'),
+    name: 'Business',
+  },
 ];
 
 module.exports = departments;
