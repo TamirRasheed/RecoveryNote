@@ -1,34 +1,22 @@
 .homescreen {
-  max-width: 1300px;
-  margin: 1rem auto;
+  max-width: 400px;
+  margin: 9rem auto;
+  padding: 1rem 1rem;
+  background-color: #f4f4f4;
+  box-shadow: 5px 5px 10px #555;
+  border-radius: 5px;
 }
 
-.homescreen__title {
-  font-size: 1.5rem;
-  color: #171717;
-  margin-bottom: 1rem;
-  margin-left: 8px;
+.homescreen > select {
+  margin-top: 5px;
+  width: 100%;
 }
 
-.homescreen__products {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-@media (max-width: 1232px) {
-  .homescreen__products {
-    grid-template-columns: repeat(3, auto);
-  }
-}
-
-@media (max-width: 950px) {
-  .homescreen__products {
-    grid-template-columns: repeat(2, auto);
-  }
-}
-
-@media (max-width: 630px) {
-  .homescreen__products {
-    grid-template-columns: 1fr;
-  }
+.homescreen__search__button {
+  padding: 10px 17px;
+  margin-top: 10px;
+  width: 100%;
+  background: #171717;
+  color: #f4f4f4;
+  border: 1px solid #171717;
 }

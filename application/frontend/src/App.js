@@ -9,13 +9,13 @@ import Backdrop from './components/Backdrop';
 
 // Screens
 import HomeScreen from './screens/HomeScreen';
+import ProductListScreen from './screens/ProductListScreen';
 import ProductScreen from './screens/ProductScreen';
 import CartScreen from './screens/CartScreen';
 import LoginScreen from './screens/LoginScreen';
 import SignupScreen from './screens/SignupScreen';
 import ThankScreen from './screens/ThankScreen';
 import PostProductScreen from './screens/PostProductScreen';
-
 
 function App() {
   const [sideToggle, setSideToggle] = useState(false);
@@ -28,13 +28,18 @@ function App() {
       <main className='app'>
         <Switch>
           <Route exact path='/' component={HomeScreen} />
+          <Route exact path='/productlist/:id' component={ProductListScreen} />
           <Route exact path='/product/:id' component={ProductScreen} />
           <Route exact path='/cart' component={CartScreen} />
           <Route exact path='/login' component={LoginScreen} />
           <Route exact path='/signup' component={SignupScreen} />
+<<<<<<< HEAD
           <Route exacth path='/thankscreen' component={ThankScreen}/>
           <Route exact path='/postproductscreen' component={PostProductScreen}/>
 
+=======
+          <Route exacth path='/thankscreen' component={ThankScreen} />
+>>>>>>> 214cd98bf17e86a096034698af23a09f769c5299
         </Switch>
       </main>
     </Router>

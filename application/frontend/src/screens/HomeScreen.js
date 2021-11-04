@@ -1,44 +1,52 @@
 import './HomeScreen.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-// Components
-import Product from '../components/Product';
+import { getDepartments as listDepartments } from '../redux/actions/departmentActions';
 
-//Actions
-import { getProducts as listProducts } from '../redux/actions/productActions';
-
-const HomeScreen = () => {
+const HomeScreen = ({ history }) => {
+  const [selectedDepartment, setSelectedDepartment] = useState('');
   const dispatch = useDispatch();
 
-  const getProducts = useSelector((state) => state.getProducts);
-  const { products, loading, error } = getProducts;
+  const getDepartments = useSelector((state) => state.getDepartments);
+  const { departments, loading, error } = getDepartments;
 
   useEffect(() => {
-    dispatch(listProducts());
+    dispatch(listDepartments());
   }, [dispatch]);
+
+  const handleSearch = () => {
+    if (selectedDepartment) {
+      history.push(`/productList/${selectedDepartment}`);
+    }
+  };
 
   return (
     <div className='homescreen'>
-      <h2 className='homescreen__title'>Latest Products</h2>
-      <div className='homescreen__products'>
-        {loading ? (
-          <h2>Loading...</h2>
-        ) : error ? (
-          <h2>{error}</h2>
-        ) : (
-          products.map((product) => (
-            <Product
-              key={product._id}
-              name={product.name}
-              description={product.description}
-              price={product.price}
-              imageUrl={product.imageUrl}
-              productId={product._id}
-            />
-          ))
-        )}
-      </div>
+      <label htmlFor='departments'>Department: </label>
+
+      <select
+        name='departments'
+        id='departments'
+        onChange={(e) => setSelectedDepartment(e.target.value)}
+      >
+        <option value={null}></option>
+        {!loading &&
+          !error &&
+          departments.map((department) => (
+            <option key={department._id} value={department._id}>
+              {department.name}
+            </option>
+          ))}
+      </select>
+
+      <button
+        className='homescreen__search__button'
+        onClick={handleSearch}
+        type='button'
+      >
+        Search
+      </button>
     </div>
   );
 };
