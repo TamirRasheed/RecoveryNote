@@ -14,6 +14,7 @@ import CartScreen from './screens/CartScreen';
 import LoginScreen from './screens/LoginScreen';
 import SignupScreen from './screens/SignupScreen';
 import ThankScreen from './screens/ThankScreen';
+import PostProductScreen from './screens/PostProductScreen';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           <Route exact path='/login' component={LoginScreen} />
           <Route exact path='/signup' component={SignupScreen} />
           <Route exacth path='/thankscreen' component={ThankScreen}/>
+          <Route exact path='/postproductscreen' component={PostProductScreen}/>
 
         </Switch>
       </main>
