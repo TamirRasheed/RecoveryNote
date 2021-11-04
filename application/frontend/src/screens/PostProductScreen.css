@@ -1,0 +1,19 @@
+    
+#details_box, #img_upload {
+    max-width: 400px;
+    margin: 3rem auto;
+    padding: 1rem 1rem;
+    background-color: #f4f4f4;
+    box-shadow: 5px 5px 10px #555;
+    border-radius: 5px;
+    }
+
+    .product_details {
+        padding: 1rem 1rem;
+
+    }
+
+
+
+
+   
