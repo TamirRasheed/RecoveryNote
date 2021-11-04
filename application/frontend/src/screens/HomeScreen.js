@@ -1,14 +1,12 @@
 import './HomeScreen.css';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
 
 import { getDepartments as listDepartments } from '../redux/actions/departmentActions';
 
-const HomeScreen = () => {
+const HomeScreen = ({ history }) => {
   const [selectedDepartment, setSelectedDepartment] = useState('');
   const dispatch = useDispatch();
-  const history = useHistory();
 
   const getDepartments = useSelector((state) => state.getDepartments);
   const { departments, loading, error } = getDepartments;

@@ -6,17 +6,19 @@ import { useDispatch, useSelector } from 'react-redux';
 import Product from '../components/Product';
 
 //Actions
-import { getProducts as listProducts } from '../redux/actions/productActions';
+import { getProductsByDepartment as listProducts } from '../redux/actions/productActions';
 
-const ProductListScreen = () => {
+const ProductListScreen = ({ match }) => {
   const dispatch = useDispatch();
 
-  const getProducts = useSelector((state) => state.getProducts);
+  const getProducts = useSelector((state) => state.getProductsByDepartment);
   const { products, loading, error } = getProducts;
 
   useEffect(() => {
-    dispatch(listProducts());
-  }, [dispatch]);
+    if (match.params.id) {
+      dispatch(listProducts(match.params.id));
+    }
+  }, [dispatch, match]);
 
   return (
     <div className='productlistscreen'>

@@ -27,8 +27,8 @@ function App() {
       <main className='app'>
         <Switch>
           <Route exact path='/' component={HomeScreen} />
-          {/* <Route exact path='/productlist' component={ProductListScreen} />
-          <Route exact path='/product/:id' component={ProductScreen} />
+          <Route exact path='/productlist/:id' component={ProductListScreen} />
+          {/* <Route exact path='/product/:id' component={ProductScreen} />
           <Route exact path='/cart' component={CartScreen} />
           <Route exact path='/login' component={LoginScreen} />
           <Route exact path='/signup' component={SignupScreen} />
