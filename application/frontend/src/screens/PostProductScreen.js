@@ -42,6 +42,12 @@ const PostProductScreen = () => {
           />
         </div>
 
+        {imageUrl && (
+          <div className='product_details'>
+            <img src={imageUrl} />
+          </div>
+        )}
+
         <div className='product_details'>
           <label htmlFor='listingName'>Listing Title: </label>
           <input
