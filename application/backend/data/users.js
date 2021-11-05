@@ -48,7 +48,7 @@ function signInUser(payload) {
     .exec()
     .then((user) => {
       if (!user) {
-        throw new Error("Please enter email or password");
+        throw new Error("Please enter username or password");
       } else {
         return bcrypt
           .compare(payload.password, user.password)
@@ -57,7 +57,7 @@ function signInUser(payload) {
               const token = getSignedToken(user._id);
               return token;
             } else {
-              throw new Error("Incorrect password or email, try again");
+              throw new Error("Incorrect password or username, try again");
             }
           })
           .catch((err) => {
