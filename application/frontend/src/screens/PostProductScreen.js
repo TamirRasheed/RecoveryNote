@@ -4,9 +4,13 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { getDepartments as listDepartments } from '../redux/actions/departmentActions';
 
+import cloudinaryUpload from '../services/uploads';
+
 const PostProductScreen = () => {
   //const [selectedFile, setSelectedFile] = useState();
   //const [isFilePicked, setIsFilePicked] = useState(false);
+  const [imageUrl, setimageUrl] = useState('');
+
   const [selectedDepartment, setSelectedDepartment] = useState('');
   const dispatch = useDispatch();
 
@@ -16,6 +20,12 @@ const PostProductScreen = () => {
   useEffect(() => {
     dispatch(listDepartments());
   }, [dispatch]);
+
+  const handleFileUpload = (e) => {
+    const uploadData = new FormData();
+    uploadData.append('file', e.target.files[0], 'file');
+    cloudinaryUpload(uploadData).then((res) => setimageUrl(res.secure_url));
+  };
 
   return (
     <div id='details_box'>
@@ -27,6 +37,7 @@ const PostProductScreen = () => {
             id='img_upload'
             name='image'
             defaultValue={null}
+            onChange={(e) => handleFileUpload(e)}
             required
           />
         </div>
