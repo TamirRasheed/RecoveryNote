@@ -25,9 +25,9 @@ const ProductListScreen = ({ match }) => {
       <h2 className='productlistscreen__title'>Latest Products</h2>
       <div className='productlistscreen__products'>
         {loading ? (
-          <h2>Loading...</h2>
+          <h2 className='productlistscreen__outertext'>Loading...</h2>
         ) : error ? (
-          <h2>{error}</h2>
+          <h2 className='productlistscreen__outertext'>{error}</h2>
         ) : (
           products.map((product) => (
             <Product

@@ -3,12 +3,13 @@
   padding: 1rem;
   background: #fff;
   cursor: pointer;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 5px 5px 10px rgba(96, 96, 96, 0.6);
   margin: 8px auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-direction: column;
+  border-radius: 4px;
 }
 
 .product > img {
@@ -45,6 +46,7 @@
   background-color: #f4f4f4;
   border: 1px solid #171717;
   font-size: 1rem;
+  border-radius: 2px;
 }
 
 .info__button:hover {

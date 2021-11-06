@@ -9,7 +9,6 @@ import cloudinaryUpload from '../services/uploads';
 
 const PostProductScreen = () => {
   const [imageUrl, setimageUrl] = useState('');
-  const [selectedDepartment, setSelectedDepartment] = useState('');
 
   const dispatch = useDispatch();
 
@@ -65,7 +64,7 @@ const PostProductScreen = () => {
 
         {imageUrl && (
           <div className='product_details'>
-            <img src={imageUrl} />
+            <img src={imageUrl} alt='user-uploaded' />
           </div>
         )}
 
@@ -98,11 +97,7 @@ const PostProductScreen = () => {
         {/* Change this to selector & dynamic */}
         <div id='department' className='product_details'>
           <label htmlFor='departments'>Department: </label>
-          <select
-            name='departments'
-            id='departments'
-            onChange={(e) => setSelectedDepartment(e.target.value)}
-          >
+          <select name='departments' id='departments'>
             <option value={null}></option>
             {!loading &&
               !error &&

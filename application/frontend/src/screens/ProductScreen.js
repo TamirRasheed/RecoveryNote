@@ -27,9 +27,9 @@ const ProductScreen = ({ match, history }) => {
   return (
     <div className='productscreen'>
       {loading ? (
-        <h2>Loading...</h2>
+        <h2 className='productsscreen__outertext'>Loading...</h2>
       ) : error ? (
-        <h2>{error}</h2>
+        <h2 className='productsscreen__outertext'>{error}</h2>
       ) : (
         <>
           <div className='productscreen__left'>
@@ -50,9 +50,7 @@ const ProductScreen = ({ match, history }) => {
               </p>
               <p>
                 Status:
-                <span>
-                  {product.countInStock > 0 ? 'In Stock' : 'Out of Stock'}
-                </span>
+                <span>{product.sold ? 'Out of Stock' : 'In Stock'}</span>
               </p>
               <p>
                 Qty
