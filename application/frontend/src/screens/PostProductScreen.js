@@ -1,4 +1,5 @@
 import './PostProductScreen.css';
+import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -7,11 +8,9 @@ import { getDepartments as listDepartments } from '../redux/actions/departmentAc
 import cloudinaryUpload from '../services/uploads';
 
 const PostProductScreen = () => {
-  //const [selectedFile, setSelectedFile] = useState();
-  //const [isFilePicked, setIsFilePicked] = useState(false);
   const [imageUrl, setimageUrl] = useState('');
-
   const [selectedDepartment, setSelectedDepartment] = useState('');
+
   const dispatch = useDispatch();
 
   const getDepartments = useSelector((state) => state.getDepartments);
@@ -21,15 +20,37 @@ const PostProductScreen = () => {
     dispatch(listDepartments());
   }, [dispatch]);
 
-  const handleFileUpload = (e) => {
+  const handleFileUpload = (event) => {
     const uploadData = new FormData();
-    uploadData.append('file', e.target.files[0], 'file');
+    uploadData.append('file', event.target.files[0], 'file');
     cloudinaryUpload(uploadData).then((res) => setimageUrl(res.secure_url));
+  };
+
+  const handleSubmit = (event) => {
+    const newProduct = {
+      name: event.target.elements.listing_name.value,
+      description: event.target.elements.desc.value,
+      price: event.target.elements.price.value,
+      imageUrl: imageUrl,
+      departmentId: event.target.elements.departments.value,
+      sellerId: 'aaaaaaaaaaaaaaaaaaaaaaa1',
+    };
+
+    axios
+      .post('/api/products/post', newProduct)
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+
+    event.preventDefault();
   };
 
   return (
     <div id='details_box'>
-      <form encType='multipart/form-data'>
+      <form onSubmit={handleSubmit} encType='multipart/form-data'>
         <div className='product_details'>
           <label htmlFor='image'>Upload Image: </label>
           <input
