@@ -29,11 +29,11 @@ const logInCheck = async (req, res) => {
 
   User.findOne({ _id: username }, (err, foundUser) => {
     if (err) {
-      res.status(500).json({ message: 'Server Error' });
+      res.status(500).json({ message: 'Server Error - Found no such user' });
     } else if (foundUser) {
       bcrypt.compare(password, foundUser.password, (err, result) => {
         if (err) {
-          res.status(500).json({ message: 'Server Error' });
+          res.status(500).json({ message: 'Server Error - Password not much' });
         } else if (result) {
           res.json({ user: req.body._id });
         } else {
@@ -41,7 +41,8 @@ const logInCheck = async (req, res) => {
         }
       });
     } else {
-      rres.status(500).json({ message: 'Server Error' });
+      console.log('4');
+      res.status(500).json({ message: 'Server Error' });
     }
   });
 };

@@ -9,12 +9,15 @@ import {
   getProductDetailsReducer,
 } from './reducers/productReducers';
 import { getDepartmentsReducer } from './reducers/departmentReducer';
+import { loginReducer, signupReducer } from './reducers/userReducer';
 
 const reducer = combineReducers({
   cart: cartReducer,
   getProductsByDepartment: getProductsByDepartmentReducer,
   getProductDetails: getProductDetailsReducer,
   getDepartments: getDepartmentsReducer,
+  login: loginReducer,
+  signup: signupReducer,
 });
 
 const middleware = [thunk];
@@ -23,10 +26,18 @@ const cartItemsInLocalStorage = localStorage.getItem('cart')
   ? JSON.parse(localStorage.getItem('cart'))
   : [];
 
+const loginInLocalStorage = localStorage.getItem('login')
+  ? JSON.parse(localStorage.getItem('login'))
+  : {
+      _id: '',
+      loggedIn: false,
+    };
+
 const INITIAL_STATE = {
   cart: {
     cartItems: cartItemsInLocalStorage,
   },
+  login: loginInLocalStorage,
 };
 
 const store = createStore(
