@@ -2,11 +2,11 @@ const mongoose = require('mongoose');
 
 departments = [
   {
-    _id: new mongoose.mongo.ObjectId('ddddddddddddddddddddddd1'),
+    _id: 'Science & Engineering',
     name: 'Science & Engineering',
   },
   {
-    _id: new mongoose.mongo.ObjectId('ddddddddddddddddddddddd2'),
+    _id: 'Business',
     name: 'Business',
   },
 ];

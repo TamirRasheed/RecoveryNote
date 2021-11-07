@@ -22,12 +22,12 @@ const productSchema = mongoose.Schema({
     default: false,
   },
   departmentId: {
-    type: mongoose.Schema.Types.ObjectId,
+    type: String,
     ref: 'department',
     required: true,
   },
   sellerId: {
-    type: mongoose.Schema.Types.ObjectId,
+    type: String,
     ref: 'user',
     required: true,
   },

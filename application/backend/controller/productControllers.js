@@ -4,7 +4,7 @@ const Product = require('../models/Product');
 const getProductsByDepartment = async (req, res) => {
   try {
     const products = await Product.find({
-      departmentId: mongoose.Types.ObjectId(req.params.id),
+      departmentId: req.params.id,
     });
     res.json(products);
   } catch (error) {
