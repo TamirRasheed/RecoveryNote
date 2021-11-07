@@ -13,7 +13,7 @@ const SignupScreen = () => {
   const handleSignup = (e) => {
     const signupData = {
       _id: e.target.elements.signup__username.value,
-      name: e.target.elements.signup__username.value,
+      name: e.target.elements.signup__name.value,
       password: e.target.elements.signup__password.value,
       school: e.target.elements.school__name.value,
       major: e.target.elements.major__name.value,
@@ -43,6 +43,11 @@ const SignupScreen = () => {
               id='signup__password'
               name='signup__password'
             />
+          </label>
+
+          <label htmlFor='signup__name'>
+            Name:
+            <input type='text' id='signup__name' name='signup__name' />
           </label>
 
           <label htmlFor='school__name'>
