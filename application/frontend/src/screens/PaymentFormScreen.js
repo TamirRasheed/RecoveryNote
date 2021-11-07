@@ -31,6 +31,10 @@ export default class PaymentForm extends React.Component {
       .toFixed(2);
   };
 
+  onSubmit = (e) => {
+    e.preventDefault();
+  };
+
   render() {
     return (
       <div id='PaymentForm' className='paymentformscreen'>

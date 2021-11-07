@@ -5,9 +5,14 @@
   grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
   gap: 8px;
   background: #fff;
-  border-radius: 2px;
   place-items: center;
   margin-bottom: 8px;
+  box-shadow: 5px 5px 10px rgba(96, 96, 96, 0.6);
+  border-radius: 4px;
+}
+
+.cartitem__image > img {
+  border-radius: 2px;
 }
 
 .cartItem__name {
@@ -30,6 +35,7 @@
   border: 1px solid #171717;
   cursor: pointer;
   transition: all 0.3s ease-out;
+  border-radius: 2px;
 }
 
 .cartItem__deleteBtn:hover,

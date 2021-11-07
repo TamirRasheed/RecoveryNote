@@ -30,7 +30,7 @@ const postProduct = async (req, res) => {
 
     await newProduct.save();
 
-    res.json({ success: true });
+    res.json({ success: true, _id: newProduct._id });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Server Post Product Error' });

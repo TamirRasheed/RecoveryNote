@@ -8,6 +8,9 @@ const SideDrawer = ({ show, click }) => {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
 
+  const getLoginStatus = useSelector((state) => state.login);
+  const { loggedIn } = getLoginStatus;
+
   const getCartCount = () => {
     return cartItems.reduce((qty, item) => Number(item.qty) + qty, 0);
   };
@@ -29,7 +32,11 @@ const SideDrawer = ({ show, click }) => {
           </Link>
         </li>
         <li>
-          <Link to='/login'>Login</Link>
+          {loggedIn ? (
+            <Link to='post-product'>Post</Link>
+          ) : (
+            <Link to='/login'>Login</Link>
+          )}
         </li>
       </ul>
     </div>
