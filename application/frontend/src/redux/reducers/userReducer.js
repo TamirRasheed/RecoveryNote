@@ -29,33 +29,3 @@ export const loginReducer = (
       return state;
   }
 };
-
-export const signupReducer = (
-  state = {
-    _id: '',
-    success: false,
-  },
-  action
-) => {
-  switch (action.type) {
-    case actionTypes.SIGNUP_REQUEST:
-      return {
-        loading: true,
-        _id: '',
-        success: false,
-      };
-    case actionTypes.SIGNUP_SUCCESS:
-      return {
-        loading: false,
-        _id: action.payload.id,
-        success: true,
-      };
-    case actionTypes.SIGNUP_FAIL:
-      return {
-        loading: false,
-        error: action.payload,
-      };
-    default:
-      return state;
-  }
-};

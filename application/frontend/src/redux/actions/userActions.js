@@ -28,17 +28,17 @@ export const login = (loginData) => async (dispatch) => {
 
 export const signup = (signupData) => async (dispatch) => {
   try {
-    dispatch({ type: actionTypes.SIGNUP_REQUEST });
+    dispatch({ type: actionTypes.LOGIN_REQUEST });
 
     const { data } = await axios.post('/api/users/signup', signupData);
 
     dispatch({
-      type: actionTypes.SIGNUP_SUCCESS,
+      type: actionTypes.LOGIN_SUCCESS,
       payload: data,
     });
   } catch (error) {
     dispatch({
-      type: actionTypes.SIGNUP_FAIL,
+      type: actionTypes.LOGIN_FAIL,
       payload:
         error.response && error.response.data.message
           ? error.response.data.message

@@ -7,8 +7,8 @@ import { login } from '../redux/actions/userActions';
 const LoginScreen = () => {
   const dispatch = useDispatch();
 
-  const getDepartments = useSelector((state) => state.login);
-  const { loggedIn, loading, error } = getDepartments;
+  const getLoginStatus = useSelector((state) => state.login);
+  const { loggedIn, loading, error } = getLoginStatus;
 
   const handleLogin = (e) => {
     const loginData = {
