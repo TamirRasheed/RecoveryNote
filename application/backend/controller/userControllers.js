@@ -17,14 +17,14 @@ const userSignUp = async (req, res) => {
       if (err) {
         res.status(500).json({ message: 'Server Error' });
       } else {
-        res.json({ user: req.body.username });
+        res.json({ user: req.body._id });
       }
     });
   });
 };
 
 const logInCheck = async (req, res) => {
-  const username = req.body.username;
+  const username = req.body._id;
   const password = req.body.password;
 
   User.findOne({ _id: username }, (err, foundUser) => {
@@ -35,7 +35,7 @@ const logInCheck = async (req, res) => {
         if (err) {
           res.status(500).json({ message: 'Server Error' });
         } else if (result) {
-          res.json({ user: req.body.username });
+          res.json({ user: req.body._id });
         } else {
           res.status(500).json({ message: 'Server Error' });
         }
