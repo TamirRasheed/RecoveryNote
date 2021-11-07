@@ -5,6 +5,7 @@ const cors = require('cors');
 
 const productRoutes = require('./routes/productRoutes');
 const departmentRoutes = require('./routes/departmentRoutes');
+const userRoutes = require('./routes/userRoutes');
 const uploadRouter = require('./routes/upload');
 
 connectDB();
@@ -24,6 +25,7 @@ app.get('/', (req, res) => {
   res.json({ message: 'API running...' });
 });
 
+app.use('/api/users', userRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/departments', departmentRoutes);
 app.use('/uploads', uploadRouter);
