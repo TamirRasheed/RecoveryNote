@@ -16,6 +16,7 @@ import LoginScreen from './screens/LoginScreen';
 import SignupScreen from './screens/SignupScreen';
 import ThankScreen from './screens/ThankScreen';
 import PostProductScreen from './screens/PostProductScreen';
+import PaymentFormScreen from './screens/PaymentFormScreen';
 
 function App() {
   const [sideToggle, setSideToggle] = useState(false);
@@ -35,6 +36,7 @@ function App() {
           <Route exact path='/signup' component={SignupScreen} />
           <Route exacth path='/thanks' component={ThankScreen} />
           <Route exact path='/post-product' component={PostProductScreen} />
+          <Route exact path='/payment-form' component={PaymentFormScreen} />
         </Switch>
       </main>
     </Router>

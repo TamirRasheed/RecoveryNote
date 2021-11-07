@@ -17,7 +17,7 @@ const LoginScreen = () => {
         <input className='login__button' type='submit' value='Sign In' />
       </form>
       <p className='loginscreen_footer'>
-      Don't have an account? Click here to <Link to="signup" > Sign Up </Link>
+        Don't have an account? Click here to <Link to='/signup'> Sign Up </Link>
       </p>
     </div>
   );
