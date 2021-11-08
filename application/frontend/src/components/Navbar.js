@@ -32,7 +32,7 @@ const Navbar = ({ click }) => {
         </li>
         <li>
           {loggedIn ? (
-            <Link to='post-product'>Post</Link>
+            <Link to='/post-product'>Post</Link>
           ) : (
             <Link to='/login'>Login</Link>
           )}
