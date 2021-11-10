@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { signup } from '../redux/actions/userActions';
 
-const SignupScreen = () => {
+const SignupScreen = ({ history }) => {
   const dispatch = useDispatch();
 
   const getLoginStatus = useSelector((state) => state.login);
@@ -27,7 +27,7 @@ const SignupScreen = () => {
 
   return (
     <>
-      {loggedIn && <Redirect to='/' />}
+      {loggedIn && history.push('/')}
       <div className='signupscreen'>
         <h2 className='signupscreen__title'>Sign Up</h2>
         <form onSubmit={handleSignup} className='signupscreen__form'>

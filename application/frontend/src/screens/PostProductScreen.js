@@ -53,7 +53,7 @@ const PostProductScreen = ({ history }) => {
 
   return (
     <>
-      {!loggedIn && <Redirect to='/login' />}
+      {!loggedIn && history.push('/login')}
       <div id='details_box'>
         <form onSubmit={handleSubmit} encType='multipart/form-data'>
           <div className='product_details'>
