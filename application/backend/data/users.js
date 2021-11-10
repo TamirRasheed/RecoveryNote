@@ -15,6 +15,13 @@ const users = [
     school: 'sfsu',
     major: 'cs',
   },
+  {
+    _id: 'Ivan35762',
+    name: 'Ivan',
+    password: '123',
+    school: 'sfsu',
+    major: 'cs',
+  },
 ];
 
 module.exports = users;
