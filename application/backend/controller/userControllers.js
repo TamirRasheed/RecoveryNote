@@ -35,7 +35,7 @@ const logInCheck = async (req, res) => {
         if (err) {
           res.status(500).json({ message: 'Server Error - Password not much' });
         } else if (result) {
-          res.json({ user: req.body._id });
+          res.json({ _id: req.body._id });
         } else {
           res.status(500).json({ message: 'Server Error' });
         }

@@ -36,7 +36,7 @@ const PostProductScreen = ({ history }) => {
       price: event.target.elements.price.value,
       imageUrl: imageUrl,
       departmentId: event.target.elements.departments.value,
-      sellerId: 'aaaaaaaaaaaaaaaaaaaaaaa1',
+      sellerId: _id,
     };
 
     axios
