@@ -1,0 +1,36 @@
+GET http://localhost:3000/
+
+###
+
+POST http://localhost:6000/api/users/signup
+content-type: application/json
+
+{
+    "name": "Steve Jobs",
+    "password": "password",
+    "school": "SDSU",
+    "_id": "STEVE",
+    "major": "JD"
+}
+
+###
+POST http://localhost:3000/api/users/login HTTP/1.1
+content-type: application/json
+
+{
+    "_id": "Test",
+    "password": "Test"
+    
+}
+
+###
+
+GET http://localhost:6000/api/departments HTTP/1.1
+
+###
+
+GET http://localhost:6000/api/products/department/Accounting
+
+###
+
+GET http://localhost:6000/api/products/6188adc631cf72b465614be0

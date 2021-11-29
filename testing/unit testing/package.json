@@ -1,0 +1,15 @@
+{
+  "name": "unit-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "unit_test.js",
+  "scripts": {
+    "test_frontend": "node unit_test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chromedriver": "^96.0.0",
+    "selenium-webdriver": "^4.1.0"
+  }
+}
