@@ -30,20 +30,21 @@ const Navbar = ({ click }) => {
             )}
           </Link>
         </li>
-        <li>
-          {loggedIn ? (
-            <Link to='/post-product'>Post</Link>
-          ) : (
+        {!loggedIn && (
+          <li>
             <Link to='/login'>Login</Link>
-          )}
-        </li>
+          </li>
+        )}
+        {loggedIn && (
+          <li>
+            <div className='hamburger__menu' onClick={click}>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </li>
+        )}
       </ul>
-
-      <div className='hamburger__menu' onClick={click}>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
     </nav>
   );
 };
