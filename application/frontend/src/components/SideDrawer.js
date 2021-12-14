@@ -1,8 +1,11 @@
 import './SideDrawer.css';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { logout } from '../redux/actions/userActions';
 
 const SideDrawer = ({ show, click }) => {
+  const dispatch = useDispatch();
   const sideDrawerClass = ['sidedrawer'];
 
   const cart = useSelector((state) => state.cart);
@@ -13,6 +16,10 @@ const SideDrawer = ({ show, click }) => {
 
   const getCartCount = () => {
     return cartItems.reduce((qty, item) => Number(item.qty) + qty, 0);
+  };
+
+  const handleLogout = () => {
+    dispatch(logout());
   };
 
   if (show) {
@@ -32,11 +39,12 @@ const SideDrawer = ({ show, click }) => {
           </Link>
         </li>
         <li>
-          {loggedIn ? (
-            <Link to='post-product'>Post</Link>
-          ) : (
-            <Link to='/login'>Login</Link>
-          )}
+          <Link to='post-product'>Post</Link>
+        </li>
+        <li>
+          <a href='/' onClick={handleLogout}>
+            Logout
+          </a>
         </li>
       </ul>
     </div>

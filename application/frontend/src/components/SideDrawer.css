@@ -68,9 +68,3 @@
   background-color: #fff;
   color: #171717;
 }
-
-@media (min-width: 960px) {
-  .sidedrawer {
-    display: none;
-  }
-}
