@@ -26,6 +26,23 @@ export const login = (loginData) => async (dispatch) => {
   }
 };
 
+export const logout = () => async (dispatch) => {
+  try {
+    dispatch({
+      type: actionTypes.LOGOUT_SUCCESS,
+    });
+    localStorage.setItem('login', JSON.stringify({ _id: '', loggedIn: false }));
+  } catch (error) {
+    dispatch({
+      type: actionTypes.LOGOUT_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    });
+  }
+};
+
 export const signup = (signupData) => async (dispatch) => {
   try {
     dispatch({ type: actionTypes.LOGIN_REQUEST });

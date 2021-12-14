@@ -25,6 +25,16 @@ export const loginReducer = (
         loading: false,
         error: action.payload,
       };
+    case actionTypes.LOGOUT_FAIL:
+      return {
+        loading: false,
+        error: action.payload,
+      };
+    case actionTypes.LOGOUT_SUCCESS:
+      return {
+        loading: false,
+        loggedIn: false,
+      };
     default:
       return state;
   }
