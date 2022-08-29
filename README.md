@@ -1,7 +1,9 @@
 # RecoveryNote Repository 
 
+An application made by college students, for college students. 
+MERN stack application
 
-# Members
+
 | Student Name | Student Email | GitHub Username |
 |    :---:     |     :---:     |     :---:       |
 | Hongjie Li   | hli14@mail.sfu.edu | hongjie003 |
