@@ -1,6 +1,7 @@
 const Department = require('../models/Department');
 
 const getDepartments = async (req, res) => {
+  console.log('here');
   try {
     const departments = await Department.find({});
     res.json(departments);
